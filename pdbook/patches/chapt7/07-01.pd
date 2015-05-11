@@ -1,0 +1,33 @@
+#N canvas 54 22 567 263 10;
+#X obj 229 25 adc~;
+#X obj 57 169 clip~ -0.7 0.7;
+#X obj 43 204 dac~;
+#X floatatom 118 118 5 0 0 1 distortion - -;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array riff 110471 float 2;
+#X coords 0 1 110471 -1 100 70 1 0 0;
+#X restore 349 32 graph;
+#X obj 349 164 soundfiler;
+#X obj 349 114 loadbang;
+#X obj 57 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 229 56 *~;
+#X obj 267 41 tgl 15 0 empty empty audio_in 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 57 143 *~ 20;
+#X msg 349 139 read -resize riff.wav riff;
+#X obj 57 60 tabplay~ riff;
+#X obj 57 113 +~;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 10 1;
+#X connect 6 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 13 1;
+#X connect 9 0 8 1;
+#X connect 10 0 1 0;
+#X connect 11 0 5 0;
+#X connect 12 0 13 0;
+#X connect 12 1 7 0;
+#X connect 13 0 10 0;

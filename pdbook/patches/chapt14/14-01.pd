@@ -1,0 +1,43 @@
+#N canvas 55 22 627 316 10;
+#X obj 58 179 osc~ 440;
+#X obj 134 189 vline~;
+#X floatatom 157 76 5 0 0 2 - - -;
+#X floatatom 227 76 5 0 0 2 - - -;
+#X floatatom 291 75 5 0 0 2 - - -;
+#X floatatom 366 76 5 0 0 2 - - -;
+#X msg 134 156 \$1 \$2 \, \$4 \$3 \$2;
+#X obj 223 125 pack 0 0;
+#X obj 50 93 sel 1 0;
+#X obj 50 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 134 126 pack 1 0 0 0;
+#X obj 58 206 *~;
+#X obj 58 242 dac~;
+#X obj 157 53 r attack;
+#X obj 227 53 r decay;
+#X obj 291 52 r sustain;
+#X obj 366 53 r release;
+#X msg 453 50 \; attack 50 \; decay 20 \; sustain 0.8 \; release 100
+;
+#X text 451 28 preset - A;
+#X text 451 190 preset - B;
+#X msg 453 213 \; attack 400 \; decay 100 \; sustain 0.5 \; release
+400;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 10 1;
+#X connect 3 0 10 2;
+#X connect 4 0 10 3;
+#X connect 5 0 7 1;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 10 0;
+#X connect 8 1 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 4 0;
+#X connect 16 0 5 0;

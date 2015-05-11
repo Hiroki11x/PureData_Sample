@@ -1,0 +1,53 @@
+#N canvas 60 22 740 344 10;
+#X obj 50 164 osc~ 440;
+#X obj 120 177 vline~;
+#X floatatom 143 66 5 0 0 2 - - -;
+#X floatatom 208 66 5 0 0 2 - - -;
+#X floatatom 265 66 5 0 0 2 - - -;
+#X floatatom 335 67 5 0 0 2 - - -;
+#X msg 120 151 \$1 \$2 \, \$4 \$3 \$2;
+#X obj 290 122 pack 0 0;
+#X obj 49 68 sel 1 0;
+#X obj 49 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 120 127 pack 1 0 0 0;
+#X obj 50 194 *~;
+#X obj 50 222 dac~;
+#X obj 143 42 r attack;
+#X obj 208 42 r decay;
+#X obj 265 42 r sustain;
+#X obj 335 43 r release;
+#X obj 417 123 pack 0 0 0 0;
+#X obj 387 122 f;
+#X obj 387 68 bng 15 250 50 0 empty empty store 17 7 0 10 -262144 -1
+-1;
+#X msg 299 212 \; attack 73 \; decay 13 \; sustain 0.62 \; release
+92 \;;
+#X msg 299 175 set \, addsemi \, add attack \$1 \, add decay \$2 \,
+add sustain \$3 \, add release \$4;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 10 1;
+#X connect 2 0 18 1;
+#X connect 3 0 10 2;
+#X connect 3 0 17 1;
+#X connect 4 0 10 3;
+#X connect 4 0 17 2;
+#X connect 5 0 7 1;
+#X connect 5 0 17 3;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 10 0;
+#X connect 8 1 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 4 0;
+#X connect 16 0 5 0;
+#X connect 17 0 21 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 21 0 20 0;

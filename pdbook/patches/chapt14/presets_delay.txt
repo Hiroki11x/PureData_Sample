@@ -1,0 +1,1 @@
+attack 50;decay 20;sustain 0.8;release 100;0 1;attack 400 5000;2000 decay 100 10000;3000 sustain 0.5 5000;5000 release 400 10000;0 2;

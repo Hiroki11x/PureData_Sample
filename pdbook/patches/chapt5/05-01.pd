@@ -1,0 +1,21 @@
+#N canvas 53 22 465 251 10;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array snare 44100 float 2;
+#X coords 0 1 44100 -1 100 70 1 70 0;
+#X restore 207 41 graph;
+#X obj 209 180 soundfiler;
+#X msg 209 152 read -resize snare.wav snare;
+#X obj 79 97 tabplay~ snare;
+#X obj 72 189 dac~;
+#X obj 79 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 209 125 loadbang;
+#X floatatom 112 123 5 0 0 0 - - -;
+#X obj 79 147 *~ 0.5;
+#X connect 2 0 1 0;
+#X connect 3 0 8 0;
+#X connect 5 0 3 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 1;
+#X connect 8 0 4 0;
+#X connect 8 0 4 1;

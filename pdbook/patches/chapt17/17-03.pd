@@ -1,0 +1,11 @@
+#N canvas 53 22 418 186 10;
+#X obj 27 128 netsend;
+#X msg 95 94 send \$1;
+#X floatatom 95 71 5 0 0 0 - - -;
+#X floatatom 204 62 5 0 0 0 - - -;
+#X obj 204 39 netreceive 50000;
+#X msg 27 40 connect 127.0.0.1 50000;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;

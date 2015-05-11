@@ -1,0 +1,25 @@
+#N canvas 55 22 561 210 10;
+#X obj 76 103 gemwin;
+#X msg 76 24 create;
+#X msg 131 24 destroy;
+#X obj 36 58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 149 74 lighting 1;
+#X obj 279 140 teapot 1.75;
+#X obj 279 118 rotateXYZ 20 -35 -10;
+#X obj 149 53 loadbang;
+#X obj 279 22 gemhead 1;
+#X obj 279 97 gemhead 2;
+#X msg 414 51 debug 1;
+#X obj 279 68 world_light;
+#X obj 279 45 rotateXYZ 0 290 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 12 0;
+#X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 0;

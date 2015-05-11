@@ -1,0 +1,22 @@
+#N canvas 54 22 497 252 10;
+#X obj 45 152 dac~;
+#X obj 266 149 table loop;
+#X obj 168 147 soundfiler;
+#X msg 168 124 read -resize loop.wav loop;
+#X obj 56 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 56 48 tabplay~ loop;
+#X obj 56 70 rfft~;
+#X obj 56 92 rifft~;
+#X obj 56 114 /~ 64;
+#X obj 168 99 loadbang;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 0 0;
+#X connect 8 0 0 1;
+#X connect 9 0 3 0;

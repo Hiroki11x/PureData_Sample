@@ -1,0 +1,19 @@
+#N canvas 50 22 297 235 10;
+#X obj 33 183 dac~;
+#X obj 33 64 osc~ 440;
+#X obj 33 141 *~;
+#X obj 163 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 100 124 line~;
+#X msg 100 91 0 10;
+#X msg 163 92 0.5 10;
+#X obj 100 63 delay 100;
+#X connect 1 0 2 0;
+#X connect 2 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;

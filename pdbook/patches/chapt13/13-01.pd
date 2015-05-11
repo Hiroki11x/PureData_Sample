@@ -1,0 +1,25 @@
+#N canvas 53 22 499 287 10;
+#N canvas 559 174 241 134 square 1;
+#X restore 52 21 pd square;
+#X obj 137 22 struct temp float x float y;
+#X obj 202 125 t b b;
+#X obj 229 180 pointer;
+#X obj 202 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 142 219 append temp x y;
+#X obj 136 46 filledpolygon 900 0 3 0 0 0 20 20 20 20 0;
+#X msg 229 157 traverse pd-square \, bang;
+#X msg 45 202 40 37;
+#X msg 142 152 20 60;
+#X msg 300 208 \; pd-square clear;
+#X msg 91 171 87 20;
+#X obj 202 81 loadbang;
+#X connect 2 0 9 0;
+#X connect 2 1 7 0;
+#X connect 3 0 5 2;
+#X connect 4 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 4 0;

@@ -1,0 +1,97 @@
+#N canvas 54 22 713 316 10;
+#X obj 493 128 soundfiler;
+#X obj 493 84 loadbang;
+#X floatatom 108 4 5 0 0 0 - - -;
+#X obj 108 24 t f b;
+#X obj 95 207 dac~;
+#X obj 183 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -228856
+-1 -1 0 1;
+#X obj 201 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 219 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 237 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 255 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -228856
+-1 -1 0 1;
+#X obj 273 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 291 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 309 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 327 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -228856
+-1 -1 0 1;
+#X obj 345 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 363 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 381 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 399 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -228856
+-1 -1 0 1;
+#X obj 417 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 435 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 453 39 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 183 152 pack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 135 117 f;
+#N canvas 55 22 237 308 kick 0;
+#X obj 96 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 123 192 5 0 0 0 - - -;
+#X obj 96 218 *~ 0.5;
+#X obj 41 59 list split;
+#X msg 69 81 \$1;
+#X obj 96 127 t b f;
+#X obj 69 104 sel 0;
+#X obj 40 27 inlet;
+#X obj 83 27 inlet;
+#X obj 96 240 outlet~;
+#X obj 96 168 tabplay~ kick;
+#X connect 0 0 10 0;
+#X connect 1 0 2 1;
+#X connect 2 0 9 0;
+#X connect 3 1 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;
+#X connect 5 1 1 0;
+#X connect 6 1 5 0;
+#X connect 7 0 3 1;
+#X connect 8 0 3 0;
+#X connect 10 0 2 0;
+#X restore 108 169 pd kick;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array kick 16514 float 2;
+#X coords 0 1 16514 -1 100 70 1;
+#X restore 493 -9 graph;
+#X obj 108 -17 netreceive 50000;
+#X msg 493 106 read -resize kick.wav kick;
+#X connect 1 0 26 0;
+#X connect 2 0 3 0;
+#X connect 3 0 23 0;
+#X connect 3 1 22 0;
+#X connect 5 0 22 1;
+#X connect 6 0 21 1;
+#X connect 7 0 21 2;
+#X connect 8 0 21 3;
+#X connect 9 0 21 4;
+#X connect 10 0 21 5;
+#X connect 11 0 21 6;
+#X connect 12 0 21 7;
+#X connect 13 0 21 8;
+#X connect 14 0 21 9;
+#X connect 15 0 21 10;
+#X connect 16 0 21 11;
+#X connect 17 0 21 12;
+#X connect 18 0 21 13;
+#X connect 19 0 21 14;
+#X connect 20 0 21 15;
+#X connect 21 0 23 1;
+#X connect 22 0 21 0;
+#X connect 23 0 4 0;
+#X connect 23 0 4 1;
+#X connect 25 0 2 0;
+#X connect 26 0 0 0;

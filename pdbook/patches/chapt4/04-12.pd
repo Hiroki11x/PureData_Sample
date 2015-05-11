@@ -1,0 +1,46 @@
+#N canvas 56 22 789 355 10;
+#X obj 379 148 soundfiler;
+#X obj 131 245 dac~;
+#X obj 36 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 36 193 tabplay~ snare;
+#X obj 139 191 tabplay~ kick;
+#X obj 139 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 235 164 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 235 190 tabplay~ hi-hat;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array snare 6276 float 2;
+#X coords 0 1 6276 -1 100 70 1 0 0;
+#X restore 110 -27 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array kick 16514 float 2;
+#X coords 0 1 16514 -1 100 70 1 0 0;
+#X restore 223 -26 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array hi-hat 14545 float 2;
+#X coords 0 1 14545 -1 100 70 1 0 0;
+#X restore 336 -26 graph;
+#X obj 379 70 loadbang;
+#X floatatom 112 104 5 0 0 0 - - -;
+#X obj 112 77 key;
+#X obj 112 134 sel 122 120 99;
+#X msg 379 102 read -resize snare.wav snare \, read -resize kick.wav
+kick \, read -resize hi-hat.wav hi-hat;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 4 0 1 1;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 1;
+#X connect 7 0 1 0;
+#X connect 11 0 15 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 2 0;
+#X connect 14 1 5 0;
+#X connect 14 2 6 0;
+#X connect 15 0 0 0;

@@ -1,0 +1,10 @@
+#N canvas 53 22 305 213 10;
+#X msg 46 44 11 12 13 14;
+#X obj 98 90 list split;
+#X floatatom 180 48 5 0 0 0 - - -;
+#X msg 126 124 \$1;
+#X floatatom 126 153 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;

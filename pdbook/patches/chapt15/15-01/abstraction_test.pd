@@ -1,0 +1,2 @@
+#N canvas 50 22 205 82 10;
+#X obj 51 30 circle_area;

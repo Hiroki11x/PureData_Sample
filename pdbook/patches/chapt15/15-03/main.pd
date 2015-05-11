@@ -1,0 +1,24 @@
+#N canvas 47 22 314 216 10;
+#X obj 78 100 easyrec;
+#X obj 30 42 adc~;
+#X obj 115 180 dac~;
+#X obj 126 142 +~;
+#X obj 97 24 bng 15 250 50 0 empty empty rec 17 7 0 10 -262144 -1 -1
+;
+#X obj 117 58 bng 15 250 50 0 empty empty play 17 7 0 10 -262144 -1
+-1;
+#X obj 179 22 bng 15 250 50 0 empty empty rec 17 7 0 10 -262144 -1
+-1;
+#X obj 199 56 bng 15 250 50 0 empty empty play 17 7 0 10 -262144 -1
+-1;
+#X obj 160 100 easyrec;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 1 0 8 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 0 1;
+#X connect 5 0 0 2;
+#X connect 6 0 8 1;
+#X connect 7 0 8 2;
+#X connect 8 0 3 1;

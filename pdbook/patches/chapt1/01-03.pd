@@ -1,0 +1,13 @@
+#N canvas 51 22 290 212 10;
+#X floatatom 88 42 5 0 0 0 - - -;
+#X floatatom 180 41 5 0 0 0 - - -;
+#X obj 126 76 *;
+#X obj 126 103 / 2;
+#X floatatom 126 132 5 0 0 0 - - -;
+#X text 57 40 base;
+#X text 139 41 height;
+#X text 93 131 area;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;

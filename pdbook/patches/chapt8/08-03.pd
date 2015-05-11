@@ -1,0 +1,36 @@
+#N canvas 55 22 570 230 10;
+#X obj 150 31 adc~;
+#X obj 241 137 dac~;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array riff 110471 float 2;
+#X coords 0 1 110471 -1 100 70 1 0 0;
+#X restore 350 27 graph;
+#X obj 350 158 soundfiler;
+#X obj 350 108 loadbang;
+#X obj 37 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 150 79 *~;
+#X obj 37 126 +~;
+#X obj 165 57 tgl 15 0 empty empty audio_in 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 249 103 vd~ vibrato;
+#X obj 249 30 osc~ 5;
+#X obj 249 78 +~ 10;
+#X obj 37 152 delwrite~ vibrato 30;
+#X obj 249 55 *~ 5;
+#X msg 350 134 read -resize riff.wav riff;
+#X obj 37 60 tabplay~ riff;
+#X connect 0 0 6 0;
+#X connect 4 0 14 0;
+#X connect 5 0 15 0;
+#X connect 6 0 7 1;
+#X connect 7 0 12 0;
+#X connect 8 0 6 1;
+#X connect 9 0 1 0;
+#X connect 9 0 1 1;
+#X connect 10 0 13 0;
+#X connect 11 0 9 0;
+#X connect 13 0 11 0;
+#X connect 14 0 3 0;
+#X connect 15 0 7 0;
+#X connect 15 1 5 0;

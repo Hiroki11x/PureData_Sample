@@ -1,0 +1,12 @@
+#N canvas 53 22 356 211 10;
+#X obj 34 158 gemwin;
+#X msg 34 39 create;
+#X msg 104 40 destroy;
+#X msg 170 80 offset 320 240;
+#X msg 170 101 fullscreen 1;
+#X msg 170 59 dimen 240 180;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;

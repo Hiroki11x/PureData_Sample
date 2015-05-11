@@ -1,0 +1,61 @@
+#N canvas 52 22 511 314 10;
+#X obj 94 177 pack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 62 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 94 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 94 213 list split;
+#X msg 122 239 \$1;
+#X floatatom 122 267 5 0 0 0 - - -;
+#X floatatom 167 213 5 0 0 0 - - -;
+#X obj 135 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 115 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 155 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 176 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 217 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 197 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 237 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 257 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 298 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 278 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 318 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 339 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 380 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 360 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 400 28 vsl 15 100 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 3 1;
+#X connect 7 0 0 2;
+#X connect 8 0 0 1;
+#X connect 9 0 0 3;
+#X connect 10 0 0 4;
+#X connect 11 0 0 6;
+#X connect 12 0 0 5;
+#X connect 13 0 0 7;
+#X connect 14 0 0 8;
+#X connect 15 0 0 10;
+#X connect 16 0 0 9;
+#X connect 17 0 0 11;
+#X connect 18 0 0 12;
+#X connect 19 0 0 14;
+#X connect 20 0 0 13;
+#X connect 21 0 0 15;

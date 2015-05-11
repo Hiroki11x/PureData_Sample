@@ -1,0 +1,8 @@
+#N canvas 55 22 243 148 10;
+#X obj 38 45 delwrite~ test 1000;
+#X obj 38 72 delread~ test 200;
+#X obj 38 18 adc~;
+#X obj 27 102 dac~;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 0 0;

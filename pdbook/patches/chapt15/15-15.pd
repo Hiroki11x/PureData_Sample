@@ -1,0 +1,16 @@
+#N canvas 49 22 450 300 10;
+#X floatatom 129 44 5 0 0 0 - - -;
+#X floatatom 129 219 5 0 0 0 - - -;
+#N canvas 339 232 218 213 (subpatch) 0;
+#X obj 74 -21 inlet;
+#X obj 74 146 outlet;
+#X obj 74 6 vsl 15 100 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 74 115 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 1 100 -1 200 140 1 0 0;
+#X restore 129 68 graph;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

@@ -1,0 +1,18 @@
+#N canvas 56 22 365 174 10;
+#X obj 186 43 pix_image apple.jpg;
+#X obj 186 20 gemhead;
+#X obj 186 66 pix_texture;
+#X obj 68 84 gemwin;
+#X msg 68 20 create;
+#X msg 115 49 destroy;
+#X obj 29 51 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 186 111 rectangle 3 2.5;
+#X obj 186 88 rotateXYZ 10 40 5;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 8 0 7 0;

@@ -1,0 +1,18 @@
+#N canvas 54 22 211 179 10;
+#X floatatom 52 58 5 0 0 0 - - -;
+#X obj 52 29 key;
+#X obj 52 85 sel 122 120 99;
+#X obj 52 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 79 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 106 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 54 126 z;
+#X text 81 126 x;
+#X text 109 126 c;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;

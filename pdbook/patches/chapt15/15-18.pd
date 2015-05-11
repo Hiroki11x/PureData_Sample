@@ -1,0 +1,12 @@
+#N canvas 93 22 567 385 10;
+#X obj 79 141 cnv 15 100 60 empty cnv_mes Hello! 20 12 0 120 -228856
+-1 0;
+#X msg 252 52 \; cnv_mes label Hello!;
+#X msg 84 52 \; cnv_mes label_font 0 120;
+#X msg 87 294 \; cnv_mes label \$1;
+#X symbolatom 87 266 10 0 0 0 - - -;
+#X obj 84 17 loadbang;
+#X text 172 265 <--- type something here;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 5 0 1 0;
